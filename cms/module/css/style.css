@@ -1,0 +1,375 @@
+h1, h2, a {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4em;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.cmsPage {
+  width: 100%;
+  height: 100%;
+  background: #F45D4C;
+  font-family: "roboto";
+  color: white;
+}
+
+.menuBar {
+  width: 20%;
+  height: 100%;
+  float: left;
+  background: #FF9085;
+  padding-left: 20px;
+  padding-top: 50px;
+  position: fixed;
+}
+.menuBar div {
+  width: 300px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+.menuBar a {
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.formDiv {
+  height: 100%;
+  width: 80%;
+  background: #F45D4C;
+  float: right;
+  color: white;
+  clear: both;
+  overflow: auto;
+  margin: 0 auto;
+}
+.formDiv .allBlogs {
+  width: 80%;
+  height: 1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.formDiv .allBlogs .oneBlog {
+  width: 100%;
+  height: 300px;
+  float: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.formDiv .allBlogs .oneBlog .blogImg {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+.formDiv .allBlogs .oneBlog .blogImg img {
+  height: 100%;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  object-fit: contain;
+}
+.formDiv .allBlogs .oneBlog .contentSec {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.formDiv .allBlogs .oneBlog .contentSec h2, .formDiv .allBlogs .oneBlog .contentSec h3 {
+  margin-top: 0;
+}
+.formDiv .allBlogs .oneBlog .contentSec p {
+  margin-bottom: 0;
+}
+.formDiv .allBlogs .oneBlog .contentSec .contentDescription {
+  width: 100%;
+  height: 100px;
+}
+.formDiv .allBlogs .oneBlog .changeBtn {
+  width: 10%;
+  height: auto;
+  float: left;
+}
+.formDiv .allBlogs .oneBlog .changeBtn .btnIcon {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50%;
+}
+.formDiv .allBlogs .oneBlog .changeBtn .btnIcon img {
+  margin-bottom: 40px;
+}
+
+.editPage {
+  background: #F45D4C;
+  color: white;
+  width: 100%;
+  height: 100vh;
+}
+.editPage h1 {
+  color: white;
+  margin-top: 50px;
+}
+
+.edit {
+  width: 900px;
+  display: block;
+  margin: 0 auto;
+  color: black;
+}
+.edit label {
+  width: 50px;
+  display: inline-block;
+}
+.edit a {
+  cursor: pointer;
+}
+.edit .toolbar {
+  height: 100px;
+}
+.edit .toolbar div {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+.edit .editSec {
+  margin-top: 100px;
+}
+.edit .editSec label {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+}
+.edit #insertImage {
+  margin-left: 20px;
+  background: transparent;
+  border: solid 1px white;
+  color: white;
+}
+.edit #submitBtn {
+  background: transparent;
+  border: solid 1px white;
+  width: 150px;
+  height: 40px;
+  color: white;
+  margin-top: 20px;
+}
+.edit #editor {
+  box-shadow: 0 0 2px #CCC;
+  min-height: 150px;
+  overflow: auto;
+  padding: 1em;
+  margin-top: 20px;
+  resize: vertical;
+  outline: none;
+  background: white;
+  color: black;
+}
+.edit .toolbar {
+  text-align: center;
+}
+.edit .toolbar a,
+.edit .fore-wrapper,
+.edit .back-wrapper {
+  border: 1px solid #AAA;
+  background: #FFF;
+  font-family: "Candal";
+  border-radius: 1px;
+  color: black;
+  padding: 5px;
+  width: 3em;
+  margin: -2px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0px 1px 0px #CCC;
+}
+.edit .toolbar a:hover,
+.edit .fore-wrapper:hover,
+.edit .back-wrapper:hover {
+  background: #f2f2f2;
+  border-color: #8c8c8c;
+}
+.edit a[data-command='redo'],
+.edit a[data-command='strikeThrough'],
+.edit a[data-command='justifyFull'],
+.edit a[data-command='insertOrderedList'],
+.edit a[data-command='outdent'],
+.edit a[data-command='p'],
+.edit a[data-command='superscript'] {
+  margin-right: 5px;
+  border-radius: 0 3px 3px 0;
+}
+.edit a[data-command='undo'],
+.edit .fore-wrapper,
+.edit a[data-command='justifyLeft'],
+.edit a[data-command='insertUnorderedList'],
+.edit a[data-command='indent'],
+.edit a[data-command='h1'],
+.edit a[data-command='subscript'] {
+  border-radius: 3px 0 0 3px;
+}
+.edit a.palette-item {
+  height: 1em;
+  border-radius: 3px;
+  margin: 2px;
+  width: 1em;
+  border: 1px solid #CCC;
+}
+.edit a.palette-item:hover {
+  border: 1px solid #CCC;
+  box-shadow: 0 0 3px #333;
+}
+.edit .fore-palette,
+.edit .back-palette {
+  display: none;
+}
+.edit .fore-wrapper,
+.edit .back-wrapper {
+  display: inline-block;
+  cursor: pointer;
+}
+.edit .fore-wrapper:hover .fore-palette,
+.edit .back-wrapper:hover .back-palette {
+  display: block;
+  float: left;
+  position: absolute;
+  padding: 3px;
+  width: 160px;
+  background: #FFF;
+  border: 1px solid #DDD;
+  box-shadow: 0 0 5px #CCC;
+  height: 70px;
+}
+.edit .fore-palette a,
+.edit .back-palette a {
+  background: #FFF;
+  margin-bottom: 2px;
+}
+
+.newBlog {
+  width: 100%;
+  height: 100vh;
+  background: #F45D4C;
+}
+.newBlog h1 {
+  color: white;
+  margin-top: 50px;
+}
+.newBlog .newForm {
+  color: black;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newBlog .newForm p {
+  margin-bottom: 0;
+}
+.newBlog .newForm label {
+  width: 100px;
+  display: inline-block;
+}
+.newBlog .newForm textarea {
+  max-width: 300px;
+  max-height: 300px;
+}
+.newBlog .newForm a {
+  cursor: pointer;
+}
+
+.showPic {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.showPic #showPhoto {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.showPic #showPhoto .newBlogBtn {
+  background: transparent;
+  border: solid 1px white;
+  width: 150px;
+  height: 40px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.uploadImagePage {
+  width: 100%;
+  height: 100vh;
+  background: #F45D4C;
+}
+.uploadImagePage .imageDir h1 {
+  color: white;
+  margin-top: 50px;
+}
+.uploadImagePage .imageDir form {
+  margin-left: 50px;
+}
+.uploadImagePage .imageDir .selectPara {
+  font-size: 3em;
+}
+.uploadImagePage .imageDir .uploadImgBtn {
+  background: transparent;
+  border: solid 1px white;
+  width: 150px;
+  height: 40px;
+  color: white;
+  margin-top: 10px;
+}
+.uploadImagePage .imageDir .chooseImgBtn {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  z-index: -1;
+}
+.uploadImagePage .imageDir .chooseImgBtn + label {
+  background: transparent;
+  border: solid 1px white;
+  width: 150px;
+  height: 40px;
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  font-family: "roboto";
+  padding-top: 0.5%;
+  cursor: pointer;
+}
+.uploadImagePage #showAllPhoto div {
+  width: 300px;
+  height: 300px;
+  float: left;
+  padding: 30px;
+}
+.uploadImagePage #showAllPhoto div img {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=style.css.map */

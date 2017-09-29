@@ -1,0 +1,375 @@
+@import '1_tools/grid.sass'
+
+// color
+///////////////////////////////
+$green: #00FFC5
+$pink: #EA48EA
+$yellow: #EAE448
+$gray: #95989A
+$orange: #FF5800
+$red: #BA0007
+$deepGreen: #2BBA00
+$purple: #5D00BA
+$lightblue: #00C4FF
+
+
+//fonts
+/////////////////////////////
+$jura: 'Jura', sans-serif
+$helBold: 'HelveticaNeuBold'
+$hel: 'HelveticaNeue'
+$helLight: 'HelveticaNeueLight'
+$helMedium: 'HelveticaNeueMedium'
+$helRegular: 'HelveticaNeueRegular'
+$ander: 'andersregula'
+
+//defalt font-size
+////////////////////////////
+$h1size: 6.5em
+$h2size: 4em
+$h3size: 2em
+$h4size: 1.5em
+
+body
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100vh
+  background: black
+  @include grid-visual
+
+h1, h2, h3, h4, h5, h6, p, a, div
+  color: white
+  font-family: $helLight
+  margin: 0
+
+//button section
+button
+  background: transparent
+  border: solid 2px
+  height: 1.2em
+  width: 5em
+  @include min-width($XXlarge)
+    height: 5em
+    width: 25em
+  @include screen($Xlarge, $XXlarge)
+     height: 4.5em
+     width: 20em
+  @include screen($large, $Xlarge)
+     height: 4em
+     width: 15em
+  @include screen($medium, $large)
+    height: 3.5em
+    width: 12em
+  @include screen($small, $medium)
+    height: 3em
+    width: 10em
+  @include max-width($small)
+    height: 3em
+    width: 8.8em
+  a
+    text-decoration: none
+    font-family: $jura
+    font-size: 1.5em
+    @include min-width($XXlarge)
+      font-size: 1.5em
+    @include screen($Xlarge, $XXlarge)
+      font-size: 1.4em
+    @include screen($large, $Xlarge)
+      font-size: 1.3em
+    @include screen($medium, $large)
+      font-size: 1.2em
+    @include screen($small, $medium)
+      font-size: 1em
+    @include max-width($small)
+      font-size: 1em
+
+
+//page title
+/////////////////////////////////
+.top
+  width: 100%
+  height: 100vh
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  top: right
+  bottom: 0
+  left: 0
+  right: 0
+// .overlay
+//   width: 100%
+//   height: 100vh
+//   opacity: 0.65
+//   position: absolute
+//   @include max-width($Xlarge)
+//     width: 100%
+//     height: 100vh
+//   @include screen($large, $Xlarge)
+//     width: 100%
+//     height: 100%
+//   @include max-width($medium)
+//     height: 80%
+//     width: 100%
+.nav
+  width: 100%
+  height: 100px
+  position: relative
+  @include max-width($small)
+    height: 80px
+  .topLogo
+    @include grid-column(1)
+    height: 60%
+    width: auto
+    cursor: pointer
+    padding-top: 1%
+  .pageTitle
+    width: 100px
+    height: auto
+    font-family: $jura
+    font-weight: 300
+    text-align: center
+    margin: 0 auto
+    font-size: 1.3em
+    padding-top: 2%
+    @include screen($Xsmall, $small)
+      font-size: 1.2em
+    @include screen($small, $medium)
+      font-size: 1.1em
+    @include screen($medium, $large)
+      font-size: 1em
+    @include screen($large, $Xlarge)
+      font-size: 1.5em
+    @include screen($Xlarge, $XXlarge)
+      font-size: 1.6em
+  .menubar
+    position: absolute
+    height: 50px
+    width: auto
+    top: 20px
+    right: 20px
+    cursor: pointer
+    @include screen($Xlarge, $XXlarge)
+      height: 50px
+    @include screen($large, $Xlarge)
+      height: 40px
+    @include screen($medium, $large)
+      height: 35px
+    @include screen($small, $medium)
+      height: 30px
+    @include max-width($small)
+      height: 25px
+
+.heroTitle
+  position: relative
+  width: 100%
+  height: 90vh
+  .titleheight
+     line-height: 75vh
+  h1
+   font-family: $ander
+   font-size: 2em
+   color: white
+   font-weight: lighter
+   text-align: center
+   @include min-width($XXlarge)
+     font-size: 6em
+   @include screen($Xlarge, $XXlarge)
+      font-size: 5em
+   @include screen($large, $Xlarge)
+      font-size: 4em
+   @include screen($medium, $large)
+      font-size: 3.3em
+   @include screen($small, $medium)
+      font-size: 3em
+   @include screen($Xsmall, $small)
+      font-size: 2.5em
+   @include max-width($Xsmall)
+      font-size: 1.5em
+.recordHeroTitle
+  padding-top: 20%
+  width: 100%
+  height: 150px
+  @include max-width($large)
+    padding-top: 15%
+  @include max-width($medium)
+    padding-top: 40%
+  @include max-width($medium)
+    padding-top: 50%
+  .scroll
+    width: 200px
+    height: 100px
+    position: absolute
+    //bottom: 100px
+    left: 45%
+    text-align: center
+    @include screen($large, $Xlarge)
+      bottom: 110px
+    @include max-width($medium)
+      bottom: 300px
+    p
+      font-family: $jura
+      font-size: 1.5em
+      width: 200px
+      height: auto
+      padding-bottom: 10px
+    img
+      width: 25%
+      height: auto
+
+//rotate title section
+////////////////////////////////////////////
+.outerRight
+  @include max-width($small)
+    display: none
+  position: relative
+  display: inline-block
+  height: 100%
+  @include min-width($medium)
+    @include grid-column(1)
+  margin-left: 50px
+  float: right
+  .inner
+    font-size: 8.5em
+    position: absolute
+    font-family: 'HelveticaNeuBold'
+    font-weight: bold
+  .rotateRight
+    @include min-width($medium)
+      transform: translateX(-42%) translateY(220%) rotate(90deg)
+    //padding-right: 80px
+    font-size: 8em
+    @include min-width($XXlarge)
+      font-size: 11.5em
+    @include screen($Xlarge, $XXlarge)
+       font-size: 10em
+    @include screen($large, $Xlarge)
+       font-size: 7.5em
+    @include screen($medium, $large)
+       font-size: 6em
+    @include screen($small, $medium)
+       font-size: 5.5em
+       transform: translateX(-43%) translateY(220%) rotate(90deg)
+    @include max-width($small)
+       transform: translateX(0) translateY(0) rotate(0)
+.outerLeft
+  // @include max-width($small)
+  //   display: none
+  position: relative
+  display: inline-block
+  height: 100%
+  @include min-width($medium)
+    @include grid-column(1)
+  @include max-width($small)
+    width: 100%
+    height: 10%
+    float: right
+    text-align: right
+  .inner
+    font-size: 8.5em
+    position: absolute
+    font-family: 'HelveticaNeuBold'
+    font-weight: bold
+    @include min-width($XXlarge)
+      font-size: 11.5em
+    @include screen($Xlarge, $XXlarge)
+       font-size: 10em
+    @include screen($large, $Xlarge)
+       font-size: 9em
+    @include screen($medium, $large)
+       font-size: 7.5em
+    @include screen($small, $medium)
+       font-size: 6em
+    @include screen($Xsmall, $small)
+       font-size: 4em
+       text-align: right
+       position: relative
+    @include max-width($Xsmall)
+      font-size: 3em
+  .rotateLeft
+    @include min-width($medium)
+      transform: translateX(-37%) translateY(205%) rotate(-90deg)
+.mobileTitle
+  @include min-width($medium)
+    display: none
+  width: 100%
+  height: 10%
+  font-size: 4em
+  font-family: $helBold
+  padding-top: 10%
+  @include  max-width($Xsmall)
+    font-size: 3.7em
+  @include  max-width($Xsmall)
+    font-size: 3em
+.homeTitle
+  position: relative
+  width: 100%
+  height: 20%
+  font-size: 8.5em
+  font-family: $helBold
+  font-weight: bold
+  @include min-width($XXlarge)
+    font-size: 10em
+  @include screen($Xlarge, $XXlarge)
+     font-size: 9em
+  @include screen($large, $Xlarge)
+     font-size: 8em
+  @include screen($medium, $large)
+     font-size: 6.4em
+  @include screen($small, $medium)
+     font-size: 5.5em
+  @include screen($Xsmall, $small)
+     font-size: 3.5em
+     height: 10%
+     position: left
+  @include max-width($Xsmall)
+    font-size: 2.5em
+    height: 10%
+    padding-top: 0
+
+//footer
+/////////////////////////////
+footer
+  border-top: solid 1px $green
+  height: 20%
+  padding-top: 9%
+  clear: both
+  .sns
+    width: 250px
+    height: 200px
+    display: block
+    margin: 0 auto
+    text-align: center
+    margin-top: 10%
+    @include max-width($medium)
+      height: 100px
+    div
+      position: relative
+      float: left
+      width: 50px
+      height: auto
+      margin-left: 15px
+      margin-right: 15px
+      text-align: center
+      img
+        width: 80%
+        height: auto
+      @include max-width($small)
+        margin-left: 16px
+        margin-right: 16px
+        img
+          width: 50%
+  .logo
+    width: 80px
+    height: auto
+    padding-top: 20px
+    display: block
+    margin: 0 auto
+    text-align: center
+    img
+      width: 50%
+      text-align: center
+      @include max-width($medium)
+        width: 40px
+      @include max-width($small)
+        width: 30%

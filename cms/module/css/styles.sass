@@ -1,0 +1,341 @@
+
+h1, h2, a
+	font-family: 'Roboto', sans-serif
+	color: white
+
+h1
+	margin: 0
+	font-size: 4em
+	margin-bottom: 50px
+	text-align: center
+	font-weight: 900
+
+.cmsPage
+	width: 100%
+	height:  100%
+	background: #F45D4C
+	font-family: 'roboto'
+	color: white
+.menuBar
+	//@include create-cols(4, 12)
+	width: 20%
+	height: 100%
+	float: left
+	background: #FF9085
+	padding-left: 20px
+	padding-top: 50px
+	position: fixed
+	div
+		width: 300px
+		height: 60px
+		display: block
+		margin: 0 auto
+	a
+		text-decoration: none
+		font-size: 3em
+		font-weight: 700
+//pages table
+////////////////////
+
+.formDiv
+	//@include create-cols(8, 12)
+	height: 100%
+	width: 80%
+	background: #F45D4C
+	float: right
+	color: white
+	clear: both
+	overflow: auto
+	//@include animation(fadeIn 4s ease 0.15s)
+	margin: 0 auto
+
+	.allBlogs
+		width: 80%
+		height: 1000px
+		display: block
+		margin-left: auto
+		margin-right: auto
+
+		.oneBlog
+			width: 100%
+			height: 300px
+			float: left
+			display: block
+			margin-left: auto
+			margin-right: auto
+			.blogImg
+				width: 40%
+				height: 100%
+				float: left
+				img
+					height: 100%
+					width: 80%
+					display: block
+					margin-left: auto
+					margin-right: auto
+					padding: 20px
+					object-fit: contain
+			.contentSec
+				width: 50%
+				height: 100%
+				float: left
+				padding-top: 2%
+				padding-bottom: 2%
+				h2, h3
+					margin-top: 0
+				p
+					margin-bottom: 0
+				.contentDescription
+					width: 100%
+					height: 100px
+			.changeBtn
+				width: 10%
+				height: auto
+				float: left
+				.btnIcon
+					width: 80%
+					display: block
+					margin-left: auto
+					margin-right: auto
+					padding-top: 50%
+					img
+						margin-bottom: 40px
+//editPage
+/////////////////////
+.editPage
+	background: #F45D4C
+	color: white
+	width: 100%
+	height: 100vh
+	h1
+		color: white
+		margin-top: 50px
+.edit
+	width: 900px
+	display: block
+	margin: 0 auto
+	color: black
+	label
+		width: 50px
+		display: inline-block
+	a
+		cursor: pointer
+	.toolbar
+		height: 100px
+		div
+			float: left
+			width: 30px
+			height: 30px
+			margin-left: 20px
+	.editSec
+		margin-top: 100px
+		label
+			display: inline-block
+			width: 100px
+			height: 30px
+	#insertImage
+		margin-left: 20px
+		background: transparent
+		border: solid 1px white
+		color: white
+
+	#submitBtn
+		background: transparent
+		border: solid 1px white
+		width: 150px
+		height: 40px
+		color: white
+		margin-top: 20px
+
+	#editor
+		box-shadow: 0 0 2px #CCC
+		min-height: 150px
+		overflow: auto
+		padding: 1em
+		margin-top: 20px
+		resize: vertical
+		outline: none
+		background: white
+		color: black
+
+	.toolbar
+		text-align: center
+
+	.toolbar a,
+	.fore-wrapper,
+	.back-wrapper
+		border: 1px solid #AAA
+		background: #FFF
+		font-family: 'Candal'
+		border-radius: 1px
+		color: black
+		padding: 5px
+		width: 3em
+		margin: -2px
+		margin-top: 10px
+		display: inline-block
+		text-decoration: none
+		box-shadow: 0px 1px 0px #CCC
+
+	.toolbar a:hover,
+	.fore-wrapper:hover,
+	.back-wrapper:hover
+		background: #f2f2f2
+		border-color: #8c8c8c
+
+	a[data-command='redo'],
+	a[data-command='strikeThrough'],
+	a[data-command='justifyFull'],
+	a[data-command='insertOrderedList'],
+	a[data-command='outdent'],
+	a[data-command='p'],
+	a[data-command='superscript']
+		margin-right: 5px
+		border-radius: 0 3px 3px 0
+
+	a[data-command='undo'],
+	.fore-wrapper,
+	a[data-command='justifyLeft'],
+	a[data-command='insertUnorderedList'],
+	a[data-command='indent'],
+	a[data-command='h1'],
+	a[data-command='subscript']
+		border-radius: 3px 0 0 3px
+
+	a.palette-item
+		height: 1em
+		border-radius: 3px
+		margin: 2px
+		width: 1em
+		border: 1px solid #CCC
+
+	a.palette-item:hover
+		border: 1px solid #CCC
+		box-shadow: 0 0 3px #333
+
+	.fore-palette,
+	.back-palette
+		display: none
+
+	.fore-wrapper,
+	.back-wrapper
+		display: inline-block
+		cursor: pointer
+
+	.fore-wrapper:hover .fore-palette,
+	.back-wrapper:hover .back-palette
+		display: block
+		float: left
+		position: absolute
+		padding: 3px
+		width: 160px
+		background: #FFF
+		border: 1px solid #DDD
+		box-shadow: 0 0 5px #CCC
+		height: 70px
+
+	.fore-palette a,
+	.back-palette a
+		background: #FFF
+		margin-bottom: 2px
+
+
+// create new blog page
+.newBlog
+	width: 100%
+	height: 100vh
+	background: #F45D4C
+	h1
+		color: white
+		margin-top: 50px
+	.newForm
+		color: black
+		width: 70%
+		display: block
+		margin-left: auto
+		margin-right: auto
+		p
+			margin-bottom: 0
+		label
+			width: 100px
+			display: inline-block
+		textarea
+			max-width: 300px
+			max-height: 300px
+		//input
+		a
+			cursor: pointer
+.showPic
+	margin-top: 50px
+	margin-bottom: 50px
+	width: 400px
+	height: 400px
+	display: block
+	margin-left: auto
+	margin-right: auto
+	#showPhoto
+		height: 100%
+		width: 100%
+		object-fit: contain
+		.newBlogBtn
+			background: transparent
+			border: solid 1px white
+			width: 150px
+			height: 40px
+			color: white
+			margin-top: 10px
+			margin-bottom: 100px
+
+//upload Image page
+///////////////////////
+.uploadImagePage
+	width: 100%
+	height: 100vh
+	background: #F45D4C
+	.imageDir
+		h1
+			color: white
+			margin-top: 50px
+		form
+			margin-left: 50px
+		.selectPara
+			font-size: 3em
+		.uploadImgBtn
+			background: transparent
+			border: solid 1px white
+			width: 150px
+			height: 40px
+			color: white
+			margin-top: 10px
+		.chooseImgBtn
+			opacity: 0
+			overflow: hidden
+			position: absolute
+			width: 0.1px
+			height: 0.1px
+			z-index: -1
+		.chooseImgBtn + label
+			background: transparent
+			border: solid 1px white
+			width: 150px
+			height: 40px
+			color: white
+			margin-top: 10px
+			display: inline-block
+			text-align: center
+			font-family: "roboto"
+			padding-top: 0.5%
+			cursor: pointer
+	#showAllPhoto
+		div
+			width: 300px
+			height: 300px
+			float: left
+			padding: 30px
+			img
+				padding: 20px
+				width: 100%
+				height: 100%
+				object-fit: contain
+#editor
+	font-size: 0.9em
