@@ -1,0 +1,248 @@
+.nav
+    background: transparent
+    z-index: 5
+    height: 5em
+.nav-left
+    .logo
+        width: 4em
+        height: auto
+        img
+            max-height: 4em
+            width: 100%
+    .nav-item a:not(.button), a.nav-item:not(.button)
+        font-family: "butlerextrabold"
+        color: $white
+        font-size: 1.35em
+        transition: color 0.3s
+        text-decoration: none
+        &:hover
+            color: $secondprimary
+            border-bottom: none
+.nav-right
+    .navbar-item
+        padding: 0.5rem 0.5rem
+        color: $grey
+    .fa-circle
+        color: transparentize($white, 0.5)
+.nav-toggle
+    height: 5em
+    span
+        height: 1.5px
+        margin-top: -8px
+        width: 16px
+
+
+/////////////////////////////////////////////////
+// INNER PAGE NAV SECTION
+/////////////////////////////////////////////////
+.innerPage
+    .desktopNav
+        position: fixed
+        width: 100%
+        background: transparentize($white, 0.3)
+        .nav-left .nav-item a:not(.button), .nav-left a.nav-item:not(.button)
+            color: $grey
+    .nav-right
+        .navbar-item
+            color: $white
+            &:hover
+                background: transparentize($white, 1)
+        .fa-circle
+            color: transparentize($primary, 0.5)
+            &:hover
+                color: $primary
+    .mobileMenu
+        background: transparentize($white, 0)
+        .navbar-item
+            color: $white
+        .fa-circle
+            color: transparentize($primary, 0.5)
+.itemNumber
+    text-align: center
+    color: $grey
+    width: 30px
+    border: none
+    padding: 1.6em 0
+    font-size: 1.2em
+    background: transparentize($white, 1)
+
+
+/////////////////////////////////////////////////
+//MOBILE PAGE SECTION
+/////////////////////////////////////////////////
+.mobileMenu
+    display: none
+.mobile_icons
+    a
+        float: left
+.slideOut
+    transition: all 0.8s ease
+.row
+    margin: 0
+.mobile_menu
+    width: 75%
+    height: 100vh
+    z-index: 100
+    //display: none
+    position: fixed
+    background: white
+    left: 0
+    top: 0
+    bottom: 0
+    z-index: 200
+    transition: all 1s ease
+    transform: translate(-100%, 0)
+    a
+        color: $grey
+        &:hover
+            color: $grey
+    ul
+        list-style-type: none
+    .mobile_menu_top
+        width: 100%
+        height: 10%
+        display: flex
+        justify-content: flex-end
+        div
+            width: 30%
+            height: auto
+            i
+                padding: 0.8em
+.mobile_menu_list
+    height: 60%
+    width: 100%
+    font-family: "butlerregular"
+    font-size: 1.6em
+    padding-top: 3em
+    ul
+        padding-left: 15px
+    .h3
+        color: $grey
+        line-height: 1em
+        width: 70%
+        border-bottom: 1px solid $grey
+        padding-top: 1.5em
+        font-size: 1.1em
+        font-family: "butlermedium"
+    .submenu_products
+        margin-top: 0.8em
+.mobile_sns
+    width: 100%
+    height: 8%
+    padding-left: 15px
+    .navbar-item
+        color: $white
+        float: left
+        padding: .5em .2em
+    .fa-circle
+        color: transparentize($primary, 0.5)
+.shopInfo
+    width: 60%
+    height: 15%
+    padding-top: 3%
+    padding-left: 15px
+    a
+        font-family: "Lato", "san-serif"
+        font-size: 0.9em
+        color: $grey
+        line-height: 1.3em
+
+/////////////////////////////////////////////////
+//RESPONSIVE SECTION
+/////////////////////////////////////////////////
+@media screen and (min-width: $mobile)
+    .desktopNav
+        display: none
+    .mobileMenu
+        display: block
+        width: 100%
+        height: 70px
+        background: transparentize($white, 0.7)
+        z-index: 100
+        position: fixed
+        margin-bottom: 5%
+        .nav-toggle
+            height: 70px
+            span
+                height: 2px
+                width: 20px
+        .mobilemenu_button
+            float: left
+            padding: 0
+        .mobile_logo
+            a
+                width: 100%
+                height: 70px
+                img
+                    display: block
+                    margin: auto
+                    width: auto
+                    height: 60px
+                    padding-top: 1.1em
+        .mobile_icons
+            padding: 0
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            a
+                float: left
+                padding: 1rem 0.1rem
+            .navbar-item
+                color: $grey
+            .fa-circle
+                color: transparentize($white, 0.5)
+    .mobile_menu_list
+        font-size: 1.25em
+    .shopInfo
+        width: 70%
+        a
+            font-size: 0.7em
+    .mobile_sns
+        height: 10%
+    .columns.is-gapless
+        margin-bottom: 0
+    .columns.is-gapless:not(:last-child)
+        margin-bottom: 5%
+    .mobileMenu .mobile_icons a
+        padding-top: 1.2rem
+@media screen and (min-width: 375px)
+    .mobile_menu_list
+        font-size: 1.25em
+    .shopInfo
+        width: 70%
+        a
+            font-size: 0.8em
+    .mobileMenu .mobile_icons a
+        padding-top: 1.6rem
+@media screen and (min-width: $tablet)
+    .menu_close
+        float: right
+    .mobile_menu_list
+        font-size: 1.8em
+    .mobile_sns
+        height: 6%
+    .shopInfo
+        width: 70%
+        a
+            font-size: 1em
+    .nav-toggle span
+        top: 55%
+@media screen and (min-width: $smdesktop)
+    .columns:not(.is-desktop)
+        display: none
+    .desktopNav
+        display: block
+    .navbar-menu
+        .navbar-start
+            .navbar-item
+                font-size: 1.1em
+    .nav-left .nav-item a:not(.button), .nav-left a.nav-item:not(.button)
+        font-size: 1.1em
+@media screen and (min-width: $lgdesktop)
+    .navbar-menu
+        .navbar-start
+            .navbar-item
+                font-size: 1.5em
+@media screen and (min-width: $lgdesktop)
+    .nav-left .nav-item a:not(.button), .nav-left a.nav-item:not(.button)
+        font-size: 1.5em

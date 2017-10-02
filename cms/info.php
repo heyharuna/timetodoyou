@@ -12,10 +12,14 @@
 		<!-- side menu bar -->
 
 		<div class="menuBar" role="menu">
-			<div><a href="admin.php">Pages</a></div>
-			<div><a href="_tour_admin.php">Tour Schedlue</a></div>
-			<div><a href="_news_admin.php">News</a></div>
-			<div><a href="info.php">Info</a></div>
+			<div>
+				<a href="admin.php">Product page</a>
+				<ul>
+					<li><a href="_insertItem.php">Create New Item</a></li>
+					<li><a href="_uploadImage.php">Upload Image</a></li>
+				</ul>
+				<a href="info.php">Account Setting</a>
+			</div>
 			<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="GET">
 				<input type="submit" name="logOut" value="Log Out">
 			</form>
@@ -62,7 +66,7 @@
 						if(isset($_POST['changeInfo'])) {
 							$newName = mysqli_real_escape_string(db_connect(), $_POST['newName']);
 							$newPass = mysqli_real_escape_string(db_connect(), $_POST['newPassword']);
-							$update = "UPDATE info_tb SET username = '".$newName."', password =  '".$newPass."' WHERE id = 0";
+							$update = "UPDATE info_tb SET username = '".$newName."', password =  '".$newPass."' WHERE id = 1";
 
 							$updateResult = mysqli_query(db_connect(), $update);
 

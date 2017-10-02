@@ -1,6 +1,10 @@
+$primary: #BF9BD6
+$white: #FFFFFF
+$secondprimary: #D6D041
+$grey: #787779
 
 h1, h2, a
-	font-family: 'Roboto', sans-serif
+	font-family: 'Lato', "sans-serif"
 	color: white
 
 h1
@@ -13,27 +17,41 @@ h1
 .cmsPage
 	width: 100%
 	height:  100%
-	background: #F45D4C
-	font-family: 'roboto'
+	background: transparentize($primary, 0.3)
+	font-family: 'Lato', "san-serif"
 	color: white
 .menuBar
 	//@include create-cols(4, 12)
 	width: 20%
 	height: 100%
 	float: left
-	background: #FF9085
+	background: #BF9BD6
 	padding-left: 20px
 	padding-top: 50px
 	position: fixed
 	div
-		width: 300px
-		height: 60px
+		width: 80%
+		height: auto
 		display: block
 		margin: 0 auto
+	ul
+		padding-top: 1.5rem
+		font-size: 0.8em
+		list-style-type: none
 	a
 		text-decoration: none
 		font-size: 3em
 		font-weight: 700
+	input
+		background: white
+		color: #787779
+		width: 30%
+		display: block
+		border: none
+		height: 3rem
+		margin-left: 3em
+		margin-top: 3rem
+		font-size: 1.2em
 //pages table
 ////////////////////
 
@@ -41,7 +59,7 @@ h1
 	//@include create-cols(8, 12)
 	height: 100%
 	width: 80%
-	background: #F45D4C
+	background: transparentize($primary, 0.3)
 	float: right
 	color: white
 	clear: both
@@ -103,7 +121,6 @@ h1
 //editPage
 /////////////////////
 .editPage
-	background: #F45D4C
 	color: white
 	width: 100%
 	height: 100vh
@@ -244,7 +261,6 @@ h1
 .newBlog
 	width: 100%
 	height: 100vh
-	background: #F45D4C
 	h1
 		color: white
 		margin-top: 50px
@@ -291,7 +307,6 @@ h1
 .uploadImagePage
 	width: 100%
 	height: 100vh
-	background: #F45D4C
 	.imageDir
 		h1
 			color: white

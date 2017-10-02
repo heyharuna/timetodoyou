@@ -1,0 +1,376 @@
+.productSec
+    height: 85vh
+    padding: 1.5rem 1rem
+    max-width: 77vw
+    width: 77vw
+    .is-half
+        display: block
+    .is-two-thirds
+        display: none
+.productMain
+    height: 80%
+    width: 70%
+    position: fixed
+    z-index: 0
+    top: 14%
+    .coverPage
+        background: transparentize($primary, 0.1)
+        height: 100%
+.showProduct
+    padding-top: 10%
+    position: relative
+.productMenu
+    position: fixed
+    overflow: auto
+    padding-left: 2%
+    h1
+        font-size: 2em
+        font-family: "butlermedium"
+        width: 80%
+        border-bottom: solid 1px $white
+        color: $white
+.productType
+    font-family: "Lato", "san-serif"
+    font-weight: 400
+    padding-top: 8%
+    color: $white
+    h5
+        font-family: "Lato", "san-serif"
+        font-weight: 700
+        font-size: 1.2em
+    ul
+        margin-left: 5%
+    input
+        margin-right: .5em
+.productCategories
+    margin-top: 4%
+.productColor
+    padding-top: 8%
+    color: $white
+    h5
+        font-family: "Lato", "san-serif"
+        font-weight: 700
+        font-size: 1.2em
+.selectColor
+    width: 70%
+    margin-top: 4%
+.field.is-grouped.is-grouped-multiline > .control:last-child, .field.is-grouped.is-grouped-multiline > .control:not(:last-child)
+    margin-bottom: 1.1rem
+.hideBag
+    display: none
+.shoppingBagDetail
+    margin-top: 8%
+    display: block
+    div
+        padding-top: 4%
+        font-family: "Lato", "san-serif"
+        color: $white
+        h5
+            font-weight: 700
+            font-size: 1.2em
+            padding-top: 0.5rem
+        button
+            margin-top: 4%
+            border: none
+            background: transparentize($secondprimary, 0.2)
+            color: $white
+            font-size: 1.1em
+            transition: all 0.3s ease
+            width: 22%
+            &:hover
+                background: transparentize($secondprimary, 0)
+                color: $white
+.productShowcase
+    padding: 0 3em
+    .items
+        flex-wrap: wrap
+.productImage
+    padding: 1rem
+    height: 60%
+    width: 100%
+    img
+        object-fit: contain
+        height: 100%
+        width: 100%
+.productDetail
+    text-align: center
+    font-family: "Lato", "san-serif"
+    color: $grey
+    .control
+        width: 50%
+        margin: auto
+        text-align: center
+        padding-top: 1rem
+        padding-bottom: 1rem
+        input
+            width: 25px
+            height: 25px
+    h2
+        font-size: 1.7em
+        border-bottom: solid 1px $grey
+        width: 60%
+        margin: auto
+        text-transform: lowercase
+    h2::first-letter
+        text-transform: uppercase
+    h5
+        font-size: 1.5em
+        padding-top: 0.5rem
+    p
+        width: 60%
+        margin: auto
+        line-height: 1.2em
+        padding-top: 0.5rem
+.cartButton
+    padding-top: 1.5rem
+    button
+        background: transparentize($secondprimary, 0.1)
+        border: none
+        width: 35%
+        display: block
+        margin: auto
+        transition: all 1s ease
+        &:hover
+            background: $secondprimary
+    a
+        background: none
+        border: none
+        color: $white
+        transition: all 0.3s ease
+        &:hover
+            color: $grey
+@media screen and (min-width: $mobile)
+    .productMain .coverPage
+        display: none
+    .productSec
+        max-width: 95vw
+        width: 95vw
+    .productDetail
+        h2
+            font-size: 1.1em
+            width: 80%
+        h5
+            font-size: 1em
+        p
+            width: 90%
+            font-size: 0.6em
+    .cartButton
+        button
+            width: 50%
+            padding-top: 0.5em
+    .button.is-medium
+        font-size: 1em
+        height: 2em
+    .mobileProductMenu
+        display: block
+        width: 80%
+        height: 100px
+        position: fixed
+        top: 10%
+        left: 10%
+        background: transparentize($primary, 0.3)
+        .select:not(.is-multiple)
+            width: 90%
+            float: left
+            height: 40px
+            display: block
+            margin: auto
+        .select select:not([multiple])
+            width: 100%
+            height: 100%
+            background: transparentize($white, 0.7)
+            color: $white
+
+    .selectProductSec
+        padding-left: 8%
+        padding-top: 1.5%
+        width: 100%
+        height: 100px
+        .select:not(.is-multiple)
+            &:after
+                border: solid 1px $secondprimary
+        .select select:hover, .select select.is-hovered
+            border: none
+        .select select
+            border: none
+    .productShowcase
+        padding: 0
+        float: left
+        margin-top: 35%
+    .productDetail .control
+        padding: 0
+        input
+            width: 18px
+            height: 18px
+    .productMenu
+        display: none
+@media screen and (min-width: 375px)
+    .mobileProductMenu
+        top: 12%
+    .productMain .coverPage
+        display: none
+    .productSec
+        max-width: 95vw
+        width: 95vw
+    .productDetail
+        h2
+            font-size: 1.1em
+            width: 80%
+        h5
+            font-size: 1em
+        p
+            width: 90%
+            font-size: 0.6em
+    .cartButton
+        button
+            width: 50%
+            padding-top: 0.5em
+    .button.is-medium
+        font-size: 1em
+        height: 2em
+    .mobileProductMenu
+        display: block
+        width: 80%
+        height: 100px
+        position: fixed
+        top: 10%
+        left: 10%
+        background: transparentize($primary, 0.3)
+        .select:not(.is-multiple)
+            width: 90%
+            float: left
+            height: 40px
+            display: block
+            margin: auto
+        .select select:not([multiple])
+            width: 100%
+            height: 100%
+            background: transparentize($white, 0.7)
+            color: $white
+
+    .selectProductSec
+        padding-left: 8%
+        padding-top: 1.5%
+        width: 100%
+        height: 100px
+        .select:not(.is-multiple)
+            &:after
+                border: solid 1px $secondprimary
+        .select select:hover, .select select.is-hovered
+            border: none
+        .select select
+            border: none
+    .productShowcase
+        padding: 0
+        float: left
+        margin-top: 35%
+    .productDetail .control
+        padding: 0
+        input
+            width: 18px
+            height: 18px
+    .productMenu
+        display: none
+@media screen and (min-width: $tablet)
+    .productDetail
+        h2
+            font-size: 1.3em
+            width: 70%
+        h5
+            font-size: 1.1em
+        p
+            width: 80%
+            font-size: 0.8em
+    .cartButton
+        button
+            width: 45%
+    .button.is-medium
+        font-size: 1.25em
+    .productSec
+        max-width: 88vw
+        width: 88vw
+    .productShowcase
+        float: left
+        margin-top: 25%
+@media screen and (min-width: $smdesktop)
+    .productShowcase
+        margin-top: 0
+    .mobileProductMenu
+        display: none
+    .productMenu
+        display: block
+    .productMain .coverPage
+        display: block
+    .productSec
+        max-width: 88vw
+        width: 88vw
+    .eachProduct
+        padding: 1.4rem
+    .productImage
+        height: 50%
+        padding: 0
+    .productDetail
+        h2
+            font-size: 1.3em
+            width: 80%
+        h5
+            font-size: 1.1em
+        p
+            width: 85%
+            font-size: 0.7em
+    .cartButton
+        button
+            width: 60%
+    .button.is-medium
+        font-size: 1.2em
+@media screen and (min-width: $mddesktop)
+    .selectColor
+        width: 100%
+        .button
+            font-size: 0.8rem
+    .cartButton button
+        width: 45%
+    .shoppingBagDetail div button
+        width: 30%
+    .productDetail
+        h2
+            font-size: 1.5em
+            width: 70%
+        h5
+            font-size: 1.2em
+        p
+            font-size: 0.8em
+    .button.is-medium
+        font-size: 1rem
+    .shoppingBagDetail
+        div
+            h5
+                font-size: 0.9em
+@media screen and (min-width: $lgdesktop)
+    .selectColor
+        width: 90%
+    .showProduct
+        padding-top: 10%
+    .productShowcase
+        padding-top: 3%
+    .productDetail
+        h2
+            font-size: 1.4em
+            width: 60%
+        h5
+            font-size: 1.2em
+        p
+            font-size: 0.9em
+    .button.is-medium
+        font-size: 1rem
+@media screen and (min-width: 2400px)
+    .productSec
+        max-width: 85vw
+        width: 85vw
+        .is-half
+            display: block
+        .is-two-thirds
+            display: none
+    .productCategories
+        li
+            font-size: 1.1em

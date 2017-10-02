@@ -1,7 +1,4 @@
-<?php
- session_start();
-
- ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,8 +6,8 @@
 		<style>
 			body {
 				padding:20px;
-				background:#80EDDC;
-				font-family:verdana;
+				background:##BF9BD6;
+				font-family:"Lato", "san-serif";
 			}
 			h1 {
 				text-align:center;
@@ -36,40 +33,39 @@
 		</form>
 
 		<?php
+            include "db.php";
+            db_connect();
 
-    include "db.php";
-    db_connect();
+            if(!db_connect()){
+              die("<p>Connection failed because".mysqli_connect_error()."</p>");
+            }
+            else {
+              mysqli_set_charset(db_connect(), "utf-8");
+        			if(isset($_POST["submit"])) {
+        				mysqli_set_charset(db_connect(), "utf-8");
 
-    if(!db_connect()){
-      die("<p>Connection failed because".mysqli_connect_error()."</p>");
-    }
-    else {
-      mysqli_set_charset(db_connect(), "utf-8");
-			if(isset($_POST["submit"])) {
-				mysqli_set_charset(db_connect(), "utf-8");
+        				$username = mysqli_real_escape_string(db_connect(), $_POST["uName"]);
+        				$password = mysqli_real_escape_string(db_connect(), $_POST["pWord"]);
 
-				$username = mysqli_real_escape_string(db_connect(), $_POST["uName"]);
-				$password = mysqli_real_escape_string(db_connect(), $_POST["pWord"]);
+        				$query = "SELECT * FROM info_tb
+        							WHERE password = '".$password."'
+        							AND username = '".$username."'";
 
-				$query = "SELECT * FROM info_tb
-							WHERE password = '".$password."'
-							AND username = '".$username."'";
+        				$queryResult = mysqli_query(db_connect(), $query);
 
-				$queryResult = mysqli_query(db_connect(), $query);
+        				$numRows = mysqli_num_rows($queryResult);
 
-				$numRows = mysqli_num_rows($queryResult);
-
-				if($numRows == 1) {
-					$_SESSION["username"] = $username;
-					echo "<script>location.replace('admin.php')</script>";
-				}
-				else {
-					echo "<p>Username or Password is invalid</p>";
-				}
-			}
-			// end connect to aql
-			mysqli_close(db_connect());
-		}
+        				if($numRows == 1) {
+        					$_SESSION["username"] = $username;
+        					echo "<script>location.replace('admin.php')</script>";
+        				}
+        				else {
+        					echo "<p>Username or Password is invalid</p>";
+        				}
+        			}
+        			// end connect to aql
+        			mysqli_close(db_connect());
+        		}
 
 
 		?>

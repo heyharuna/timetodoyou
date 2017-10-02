@@ -7,7 +7,7 @@
 			$host = "localhost";
 			$username = "root";
 			$password = "root";
-			$db = "mike_db";
+			$db = "timetodoyou_db";
 
 			$connection = mysqli_connect($host, $username, $password, $db);
 
@@ -23,9 +23,9 @@
 		}
 	}
 
-	function db_close($conn) {
-		if(!$conn) {
-			mysqli_close($conn);
+	function db_close($connection) {
+		if(!$connection) {
+			mysqli_close($connection);
 		}
 	}
 ?>
