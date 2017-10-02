@@ -136,7 +136,7 @@
                 <div class='columns is-desktop is-mobile items'>
                 <?php
                     include "cms/db.php";
-                    db_connect();
+                    pub_connect();
                     ini_set('display_errors', 1);
                     ini_set('display_startup_errors', 1);
                     error_reporting(E_ALL);

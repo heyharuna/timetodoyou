@@ -1,15 +1,41 @@
 <?php
-	function db_connect() {
+
+	if (!function_exists('parseDate')) {
+		function db_connect() {
+
+			static $connection;
+
+			if(!isset($connection)) {
+
+				$config = parse_ini_file("../../config/time_config.ini");
+				$connection = mysqli_connect("localhost",
+											 $config["username"],
+											 $config["password"],
+											 $config["database"]);
+
+				if(!$connection) {
+					return mysqli_error();
+				}
+				else {
+					return $connection;
+				}
+			}
+			else {
+				return $connection;
+			}
+		}
+
+	// for public
+	function pub_connect() {
 		static $connection;
 
 		if(!isset($connection)) {
 
-			$host = "localhost";
-			$username = "root";
-			$password = "root";
-			$db = "timetodoyou_db";
-
-			$connection = mysqli_connect($host, $username, $password, $db);
+			$config = parse_ini_file("../config/time_config.ini");
+			$connection = mysqli_connect("localhost",
+										 $config["username"],
+										 $config["password"],
+										 $config["database"]);
 
 			if(!$connection) {
 				return mysqli_error();
@@ -23,9 +49,14 @@
 		}
 	}
 
-	function db_close($connection) {
-		if(!$connection) {
-			mysqli_close($connection);
+	function db_close($conn) {
+		if(!$conn) {
+			mysqli_close($conn);
 		}
 	}
+	}
+	// for admin page
+
+
+
 ?>
