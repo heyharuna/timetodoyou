@@ -66,7 +66,6 @@ $(function(){
 
         var newProduct = new productObject(itemName, itemPrice, itemDescription, itemImg);
         proArray.push(newProduct);
-        console.log(proArray);
 
         // total cost of shopping bag
         // var itemNum = parseFloat(proArray[i]['price']);
@@ -84,7 +83,6 @@ $(function(){
             var eachItem = document.createElement("section");
             eachItem.className = "modal-card-body";
             eachItem.innerHTML = "<article class='media'><div class='media-left'><figure class='image is-128x128'><img class='modalImage' src='"+proArray[i]['img']+"' alt='image'></figure></div><div class='media-content'><div class='content'><h3 class='modalTitle'>"+proArray[i]['name']+"</h3><h5 class='modalPrice'>"+proArray[i]['price']+" CAD</h5><p class='modalDescription'>"+proArray[i]['description']+"</p></div></div></article>";
-
         }
         $(".showItemCards").append(eachItem);
     });
